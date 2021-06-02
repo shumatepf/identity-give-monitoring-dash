@@ -1,6 +1,5 @@
 ---
-# This workflow will validate the Kong decK state file and deploy
-# the application to a target environment
+# This workflow will deploy the application to a target environment
 
 name: Deploy
 
@@ -16,7 +15,6 @@ on:
 jobs:
   deploy:
     if: github.repository_owner == '18F'
-    needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -59,8 +57,7 @@ jobs:
         run: cf target -o ${{ secrets.CF_ORG }} -s ${{ steps.deployment-target.outputs.SPACE }}
 
       - name: Deploy application
-        run: cf push --vars-file vars.yaml --var ENVIRONMENT_NAME=${{ steps.deployment-target.outputs.ENVIRONMENT_NAME }}
+        run: cf push --var ENVIRONMENT_NAME=${{ steps.deployment-target.outputs.ENVIRONMENT_NAME }}
 
       - name: Apply CF Network Policies
-        run: |
-          cf add-network-policy monitoring-dash monitoring
+        run: cf add-network-policy monitoring-dash monitoring

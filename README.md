@@ -1,4 +1,4 @@
-# GIVE Monitoring Service
+# GIVE Monitoring Dashboard Service
 Monitoring visualization for GIVE microservices in cloud.gov
 
 ## Why this project

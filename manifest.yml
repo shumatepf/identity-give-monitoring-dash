@@ -9,4 +9,4 @@ applications:
     routes:
       - route: identity-give-monitoring-dash-((ENVIRONMENT_NAME)).apps.internal
     env:
-      GF_SERVER_HTTP_PORT: 8080
+      ENVIRONMENT_NAME: ((ENVIRONMENT_NAME))

@@ -1,0 +1,6 @@
+# Grafana dashboard-as-code configuration
+- name: "default"
+  folder: ""
+  type: "file"
+  options:
+    folder: "./dashboards"

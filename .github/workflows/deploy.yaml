@@ -60,4 +60,6 @@ jobs:
         run: cf push --var ENVIRONMENT_NAME=${{ steps.deployment-target.outputs.ENVIRONMENT_NAME }}
 
       - name: Apply CF Network Policies
-        run: cf add-network-policy monitoring-dash monitoring
+        run: |
+          cf add-network-policy monitoring-dash monitoring
+          cf add-network-policy monitoring monitoring-dash

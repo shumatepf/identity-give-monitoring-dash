@@ -4,9 +4,10 @@ set -e
 download_output_file="grafana.tar.gz"
 
 # To update grafana, update the download URL and checksum below.
-# New versions can be found at https://grafana.io/download/
-download_url="https://dl.grafana.com/oss/release/grafana-8.0.6.linux-amd64.tar.gz"
-valid_hash="252a4d022f4dbd9a68d07cdd0e6762d62fa53462f294781cb53e8f3d61cd8649  $download_output_file"
+# New versions can be found at https://grafana.com/grafana/download
+# in the 'Standalone Linux Binaries' section.
+download_url="https://dl.grafana.com/oss/release/grafana-8.1.1.linux-amd64.tar.gz"
+valid_hash="9091d998ffa8b3eaa6a5d2b66e6e4563badd4f4cb25eb0d80029fe538c7252bf  $download_output_file"
 
 # Download the grafana archive
 wget --quiet --output-document "$download_output_file" "$download_url"

@@ -2,9 +2,9 @@
 apiVersion: 1
 
 datasources:
- - name: give-monitoring-data
+ - name: idva-monitoring-data
    type: prometheus
    access: proxy
-   url: http://identity-give-monitoring-${ENVIRONMENT_NAME}.apps.internal:$PORT
+   url: http://identity-idva-monitoring-${ENVIRONMENT_NAME}.apps.internal:$PORT
    isDefault: true
    editable: false

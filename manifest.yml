@@ -7,7 +7,7 @@ applications:
     buildpacks:
       - https://github.com/cloudfoundry/binary-buildpack
     routes:
-      - route: identity-give-monitoring-dash-((ENVIRONMENT_NAME)).apps.internal
+      - route: identity-idva-monitoring-dash-((ENVIRONMENT_NAME)).apps.internal
     env:
       ENVIRONMENT_NAME: ((ENVIRONMENT_NAME))
     processes:

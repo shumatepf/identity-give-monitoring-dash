@@ -1,20 +1,20 @@
-# GIVE Monitoring Dashboard Service
-Monitoring visualization for GIVE microservices in cloud.gov
+# IDVA Monitoring Dashboard Service
+Monitoring visualization for IDVA microservices in cloud.gov
 
 ## Why this project
-The GIVE project is composed of many different microservices, each needing to
+The IDVA project is composed of many different microservices, each needing to
 be monitored for performance, stability, and uptime. The monitoring dash
 microservice has the following goals:
-* Provide monitoring visualization capabilities for GIVE microservices
-* Alert GIVE operators/admins on specified metric thresholds
+* Provide monitoring visualization capabilities for IDVA microservices
+* Alert IDVA operators/admins on specified metric thresholds
 
 ## CI/CD Workflows with GitHub Actions
 The most up-to-date information about the CI/CD flows for this repo can be found in the
-[GitHub workflows directory](https://github.com/18F/identity-give-monitoring-dash/tree/main/.github/workflows)
+[GitHub workflows directory](https://github.com/18F/identity-idva-monitoring-dash/tree/main/.github/workflows)
 
 ## Implementation
-GIVE monitoring dash is a Grafana server deployed to Cloud.gov and configured to use
-consume the GIVE Prometheus deployment as it's data source.
+IDVA monitoring dash is a Grafana server deployed to Cloud.gov and configured to use
+consume the IDVA Prometheus deployment as it's data source.
 
 ## Public domain
 

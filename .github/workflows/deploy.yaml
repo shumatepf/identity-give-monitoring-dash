@@ -29,7 +29,7 @@ jobs:
           cf-org: ${{ secrets.CF_ORG }}
 
       - name: Deploy application
-        run: cf push --var ENVIRONMENT_NAME=${{ steps.cf-setup.outputs.target-environment }} --var GRAFANA_PASS=${{GRAFANA_PASS}}
+        run: cf push --var ENVIRONMENT_NAME=${{ steps.cf-setup.outputs.target-environment }} --var GRAFANA_PASS=${{ secrets.GRAFANA_PASS }}
 
       - name: Apply CF Network Policies
         run: |

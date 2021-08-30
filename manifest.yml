@@ -10,6 +10,7 @@ applications:
       - route: identity-idva-monitoring-dash-((ENVIRONMENT_NAME)).apps.internal
     env:
       ENVIRONMENT_NAME: ((ENVIRONMENT_NAME))
+      GRAFANA_PASS: ((GRAFANA_PASS))
     processes:
       - type: web
         command: ./install_grafana.sh && ./bin/grafana-server web
